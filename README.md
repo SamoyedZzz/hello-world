@@ -1,2 +1,3 @@
 # hello-world
-just another repository
+I'm just a student in Nanjing Telecommunication University currently.
+I'm learning 'Machine Learning'&'Deep Learning' by myself.
