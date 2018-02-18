@@ -1,0 +1,19 @@
+import cv2  
+
+img = cv2.imread(r'car2.jpg')  
+  
+gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)  
+  
+# surf.hessianThreshold=3000  
+surf = cv2.xfeatures2d.SURF_create(1000)  
+  
+kp,res = surf.detectAndCompute(gray,None)  
+print(res.shape)  
+  
+img = cv2.drawKeypoints(img,kp,None,(255,0,255),4)  
+print(len(kp))  
+  
+cv2.namedWindow("SURF")  
+cv2.imshow("SURF", img)  
+cv2.waitKey(0)  
+cv2.destroyAllWindows()  
